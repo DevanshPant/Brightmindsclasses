@@ -10,7 +10,7 @@ const ProgramsSection = () => {
       title: 'Foundation Coaching',
       subtitle: 'Classes 7-10',
       description: 'Comprehensive coverage of NCERT curriculum with focus on conceptual clarity and problem-solving skills for all subjects.',
-      features: ['Mathematics & Science', 'English & Hindi', 'Social Studies', 'Regular Assessments'],
+      features: ['Mathematics', 'Science', 'Social Studies', 'Regular Assessments'],
       color: 'primary',
     },
     {
@@ -18,7 +18,7 @@ const ProgramsSection = () => {
       title: 'Career Guidance',
       subtitle: 'Exposure Sessions',
       description: 'Early exposure to career options and various professional paths to help students make informed choices.',
-      features: ['Industry Insights', 'Expert Talks', 'Field Exposure', 'Personality Development'],
+      features: ['Career clarity', 'Expert interactions', 'Professional Direction', 'Personality Development'],
       color: 'accent',
     },
     {
@@ -26,16 +26,8 @@ const ProgramsSection = () => {
       title: 'Defense Orientation',
       subtitle: 'NDA & TES Awareness',
       description: 'Introduction to defense career paths with focus on preparing students mentally and physically for future entrance exams.',
-      features: ['NDA Preparation Basics', 'Physical Fitness', 'Mental Aptitude', 'Leadership Skills'],
+      features: ['Entrance Coaching', 'Officer interaction', 'Service insights', 'Veteran Guidance'],
       color: 'primary',
-    },
-    {
-      icon: Rocket,
-      title: 'Holistic Development',
-      subtitle: 'Beyond Academics',
-      description: 'Programs designed to develop well-rounded individuals with strong values, discipline, and communication skills.',
-      features: ['Public Speaking', 'Team Activities', 'Value Education', 'Time Management'],
-      color: 'accent',
     },
   ];
 

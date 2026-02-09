@@ -73,23 +73,6 @@ const ContactSection = () => {
     document.body.appendChild(form);
     form.submit();
 
-    // If we posted directly to Google Forms (no Apps Script), open a prefill view as a fallback
-    // This ensures the user can still submit if the automated POST was rejected.
-    if (!useAppsScript) {
-      const formId = '1FAIpQLSeC-iaeX4k9Jzus0rseHbFsD8TsTuIL1tb2V_FE-bfyjwLHvA';
-      const prefillUrl = `https://docs.google.com/forms/d/e/${formId}/viewform?usp=pp_url` +
-        `&entry.330719284=${encodeURIComponent(formData.studentName)}` +
-        `&entry.313112089=${encodeURIComponent(formData.studentClass ? `Class ${formData.studentClass}` : '')}` +
-        `&entry.1750223016=${encodeURIComponent(formData.parentContact)}` +
-        `&entry.743997789=${encodeURIComponent(formData.email)}` +
-        `&entry.266804100=${encodeURIComponent(formData.message)}`;
-
-      // Open fallback in a new tab after a short delay so the hidden form has a chance to submit
-      setTimeout(() => {
-        try { window.open(prefillUrl, '_blank'); } catch (e) { /* ignore */ }
-      }, 1400);
-    }
-
     // Cleanup after submission
     setTimeout(() => {
       try {

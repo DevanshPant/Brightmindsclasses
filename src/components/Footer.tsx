@@ -69,8 +69,9 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-background/70">
-                  Ahilyanagar<br />
-                  Maharashtra, India
+                  1st floor, Shivshambho Towers, Tapovan Road, Behind Saibaba Mandir, Nirmalnagar, Ahilyanagar
+                  <br />
+                  414003, Maharashtra, India
                 </span>
               </li>
               <li className="flex items-center gap-3">

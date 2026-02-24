@@ -107,7 +107,13 @@ const ContactSection = () => {
     {
       icon: MapPin,
       label: 'Visit Us',
-      value: 'Ahilyanagar',
+      value: (
+        <>
+          1st floor, Shivshambho Towers, Tapovan Road, Behind Saibaba Mandir, Nirmalnagar, Ahilyanagar
+          <br />
+          414003
+        </>
+      ),
       subtext: 'Maharashtra, India',
     },
     {

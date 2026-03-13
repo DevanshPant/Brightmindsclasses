@@ -21,13 +21,15 @@ const Navbar = () => {
     { name: 'About', href: '#about' },
     { name: 'Programs', href: '#programs' },
     { name: 'Why Us', href: '#why-us' },
+    { name: 'Privacy Policy', href: '/privacy-policy' },
     { name: 'Contact', href: '#contact' },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavClick = (href: string) => {
+    if (href.startsWith('/')) {
+      window.location.href = href;
+    } else {
+      scrollToSection(href);
     }
     setIsMobileMenuOpen(false);
   };
@@ -47,7 +49,7 @@ const Navbar = () => {
             href="#home"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection('#home');
+              handleNavClick('#home');
             }}
             className="flex items-center gap-3 group"
           >
@@ -63,7 +65,7 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <button
                 key={link.name}
-                onClick={() => scrollToSection(link.href)}
+                onClick={() => handleNavClick(link.href)}
                 className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground relative group transition-colors duration-300"
               >
                 {link.name}
@@ -77,7 +79,7 @@ const Navbar = () => {
             <Button
               variant="hero"
               size="default"
-              onClick={() => scrollToSection('#contact')}
+              onClick={() => handleNavClick('#contact')}
             >
               Enquire Now
             </Button>
@@ -107,7 +109,7 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <button
               key={link.name}
-              onClick={() => scrollToSection(link.href)}
+              onClick={() => handleNavClick(link.href)}
               className="block w-full text-left px-4 py-3 text-foreground/80 hover:text-foreground hover:bg-secondary rounded-lg transition-all duration-300 font-medium"
             >
               {link.name}
@@ -118,7 +120,7 @@ const Navbar = () => {
               variant="hero"
               size="lg"
               className="w-full"
-              onClick={() => scrollToSection('#contact')}
+              onClick={() => handleNavClick('#contact')}
             >
               Enquire Now
             </Button>

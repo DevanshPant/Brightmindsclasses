@@ -2,8 +2,13 @@ import express from 'express';
 import cors from 'cors';
 import { Resend } from 'resend';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -11,6 +16,9 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+// Serve static files from the React app build directory
+app.use(express.static(path.join(__dirname, '../dist')));
 
 // Your email (where form submissions should be sent)
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'hello@brightmindsclasses.in';
@@ -96,6 +104,11 @@ app.post('/forms/webhook', async (req, res) => {
       error: error.message || 'Internal server error',
     });
   }
+});
+
+// Catch-all handler: send back index.html for client-side routing
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 // Start server

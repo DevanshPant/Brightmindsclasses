@@ -1,5 +1,4 @@
 import { Mail, MapPin } from 'lucide-react';
-import logo from '@/assets/logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -30,7 +29,7 @@ const Footer = () => {
           <div>
             <div className="mb-6 bg-background/10 p-4 rounded-2xl inline-block">
               <img 
-                src={logo} 
+                src="/logoji.png" 
                 alt="BrightMinds" 
                 className="h-20 w-auto"
               />

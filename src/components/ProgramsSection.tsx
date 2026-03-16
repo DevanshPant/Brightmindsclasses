@@ -24,7 +24,7 @@ const ProgramsSection = () => {
     {
       icon: Shield,
       title: 'Defense Orientation',
-      subtitle: 'NDA & TES Awareness',
+      subtitle: 'Sainik School, RMS, SPI, NDA & TES Awareness',
       description: 'Introduction to defense career paths with focus on preparing students mentally and physically for future entrance exams.',
       features: ['Entrance Coaching', 'Officer interaction', 'Service insights', 'Veteran Guidance'],
       color: 'primary',

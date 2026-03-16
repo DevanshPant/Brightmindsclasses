@@ -54,7 +54,7 @@ const Navbar = () => {
             className="flex items-center gap-3 group"
           >
             <img 
-              src="/logoji.png" 
+              src="/logoj.png" 
               alt="BrightMinds" 
               className="h-16 md:h-20 w-auto group-hover:scale-105 transition-transform duration-300"
             />
